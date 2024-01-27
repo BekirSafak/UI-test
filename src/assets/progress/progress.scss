@@ -1,0 +1,21 @@
+// progress-bar.scss
+
+$progress-bar-background: #f8f2fd;
+$progress-bar-color: #8c60a8;
+
+.progress-bar {
+    width: 20%;
+    height: 20px;
+    background-color: $progress-bar-background;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 90px;
+
+    .progress {
+        height: 100%;
+        width: 0;
+        background-color: $progress-bar-color;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out;
+    }
+}

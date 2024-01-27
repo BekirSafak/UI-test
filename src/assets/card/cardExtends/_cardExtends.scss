@@ -1,0 +1,15 @@
+%bold-head {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+%bold-head-small {
+    font-size: large;
+    font-weight: bold;
+}
+
+%df-vertical-center-beetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,34 @@
+$circular-progress-size: 100px;
+$circular-progress-stroke-width: 10px;
+$circular-progress-track-color: #e0e0e0;
+$circular-progress-progress-color: #3498db;
+
+.circular-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .progress-ring {
+        transform: rotate(-90deg);
+    }
+
+    svg {
+        width: $circular-progress-size;
+        height: $circular-progress-size;
+
+        .track {
+            fill: transparent;
+            stroke: $circular-progress-track-color;
+            stroke-width: $circular-progress-stroke-width;
+        }
+
+        .progress {
+            fill: transparent;
+            stroke: $circular-progress-progress-color;
+            stroke-width: $circular-progress-stroke-width;
+            stroke-dasharray: 2 * 3.14159265359 * ($circular-progress-size / 2 - $circular-progress-stroke-width / 2);
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset 0.3s ease-in-out;
+        }
+    }
+}

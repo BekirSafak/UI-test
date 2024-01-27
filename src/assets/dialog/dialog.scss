@@ -1,0 +1,124 @@
+$cardColor: #f8f2fd;
+
+$basePurple: #8c60a8;
+
+$dotedColor: #383838;
+
+$colorWhite: #fff;
+$colorBlack: #000;
+
+$borderColor: #ccc;
+
+$input-color: #3498db; // Varsayılan renk
+$input-checked-color: #2ecc71; // Seçili durumda olan renk
+
+@import "../card/cardExtends/cardExtends";
+
+.dialogBox {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    background-color: $cardColor;
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px;
+
+    .iconBox {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .textIcon {
+            width: 25px;
+            height: 25px;
+            padding: 8px;
+            border-radius: 100%;
+            background: $basePurple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $colorWhite;
+        }
+    }
+
+    h1 {
+        @extend %bold-head
+    }
+
+    p {
+        text-indent: 12px;
+
+    }
+
+    .itemList {
+        display: flex;
+        margin-bottom: 24px;
+
+        ul {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+            li {
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+                border-bottom: 1px solid $borderColor;
+
+                .left {
+                    display: flex;
+                    align-items: center;
+
+                    .userImg {
+                        width: 10px;
+                        height: 10px;
+                        padding: 8px;
+                        border-radius: 100%;
+                        background: $basePurple;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $colorWhite;
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        font-size: 12px;
+                        font-weight: bold;
+                        color: #6f6f6f;
+                        margin-right: 8px;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .dialogBtn {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+
+        a {
+            @extend %bold-head-small;
+            text-decoration: none;
+            margin-left: 16px;
+            color: $basePurple;
+        }
+
+        :hover {
+            color: #ccc;
+            transition: .5s ease-in-out;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+$cardColor: #f8f2fd;
+$borderColor: #ccc;
+$basePurple: #8c60a8;
+
+$dotedColor: #383838;
+
+$colorWhite: #fff;
+$colorBlack: #000;
+
+@import "../card/cardExtends/cardExtends";
+
+.responseCard {
+    margin: 20px;
+    width: 350px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    border: .5px solid $borderColor;
+    border-radius: 1rem;
+    background: $cardColor;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 20px;
+
+    .cardleft {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+
+        .userIMG {
+            background: $basePurple;
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            padding: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+
+        .userBox {
+            margin-left: 15px;
+
+            p {
+                display: flex;
+                flex-direction: column;
+                @extend %bold-head;
+
+                span {
+                    color: #ccc;
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 200 !important;
+                    font-size: 14px;
+                }
+            }
+
+        }
+
+
+    }
+
+    .cardRight {
+        width: 40%;
+        img {
+            width: 100%;
+            height: 100%;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+    }
+}
